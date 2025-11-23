@@ -1,0 +1,531 @@
+.home-container {
+  background: #000000;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.ticker-wrapper {
+  margin-top: 0;
+  border-bottom: 2px solid var(--medusa-green);
+  box-shadow: 0 4px 30px var(--medusa-green-glow);
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+}
+
+/* Animated Medusa Logo */
+.hero-medusa-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.medusa-logo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medusa-svg {
+  width: 100vmin;
+  height: 100vmin;
+  max-width: 1200px;
+  max-height: 1200px;
+  filter: drop-shadow(0 0 150px var(--medusa-green-glow));
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--medusa-green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--medusa-green-glow);
+}
+
+/* Hero Content Overlay */
+.hero-content-overlay {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hero-text {
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--medusa-green);
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px var(--medusa-green-glow);
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 1.1;
+  margin-bottom: 35px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  position: relative;
+  z-index: 11;
+}
+
+.hero-title .text-gradient-stone {
+  position: relative;
+  z-index: 12;
+  display: inline-block;
+  color: var(--medusa-green);
+  text-shadow:
+    0 0 20px var(--medusa-green-glow),
+    0 0 40px var(--medusa-green-glow),
+    0 0 60px var(--medusa-green-glow);
+  animation: text-glow-pulse 2s ease-in-out infinite;
+  font-weight: 900;
+}
+
+@keyframes text-glow-pulse {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 20px var(--medusa-green-glow),
+      0 0 40px var(--medusa-green-glow),
+      0 0 60px var(--medusa-green-glow);
+  }
+
+  50% {
+    text-shadow:
+      0 0 30px var(--medusa-green-glow),
+      0 0 60px var(--medusa-green-glow),
+      0 0 90px var(--medusa-green-glow);
+  }
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin-bottom: 50px;
+  line-height: 1.9;
+}
+
+.highlight-text {
+  color: var(--medusa-green);
+  font-weight: 600;
+  text-shadow: 0 0 15px var(--medusa-green-glow);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--medusa-green);
+  color: #000;
+  box-shadow: 0 0 30px var(--medusa-green-glow);
+  border: 2px solid var(--medusa-green);
+  border-radius: 50px;
+  padding: 18px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-primary::before {
+  display: none;
+}
+
+.btn-primary:hover {
+  background: var(--medusa-green-dark);
+  box-shadow: 0 0 45px var(--medusa-green-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-radius: 50px;
+  padding: 18px 40px;
+  font-size: 1.1rem;
+}
+
+
+.stats-section {
+  padding: 120px 5%;
+  background: linear-gradient(to bottom, #000000, #050505);
+  position: relative;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--medusa-green), transparent);
+  box-shadow: 0 0 20px var(--medusa-green-glow);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: #0a0a0a;
+  border: 2px solid #1a1a1a;
+  border-radius: 24px;
+  padding: 50px 30px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--medusa-green-glow), transparent);
+  transition: left 0.6s ease;
+}
+
+.stat-card:hover::before {
+  left: 100%;
+}
+
+.stat-card:hover {
+  border-color: var(--medusa-green);
+  box-shadow: 0 10px 40px var(--medusa-green-glow);
+  transform: translateY(-10px);
+}
+
+.stat-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px var(--medusa-green-glow));
+  /* Removed wobble animation */
+}
+
+.stat-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--medusa-green);
+  text-shadow: 0 0 30px var(--medusa-green-glow);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.features-section {
+  padding: 120px 5%;
+  background: #000000;
+  position: relative;
+}
+
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--medusa-green), transparent);
+  box-shadow: 0 0 20px var(--medusa-green-glow);
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 70px;
+  letter-spacing: 4px;
+}
+
+.highlight {
+  color: var(--medusa-green);
+  text-shadow: 0 0 30px var(--medusa-green-glow);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card-wrapper {
+  perspective: 1000px;
+}
+
+.feature-card {
+  background: #0a0a0a;
+  border: 2px solid #1a1a1a;
+  padding: 50px 35px;
+  border-radius: 28px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 28px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--medusa-green), transparent, var(--medusa-green));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.feature-card:hover {
+  border-color: var(--medusa-green);
+  box-shadow: 0 15px 50px var(--medusa-green-glow);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-icon {
+  font-size: 4rem;
+  color: var(--medusa-green);
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 20px var(--medusa-green-glow));
+  transition: all 0.4s ease;
+}
+
+.feature-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--medusa-green-glow), transparent);
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: -1;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  color: var(--text-main);
+  letter-spacing: 1.5px;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cta-section {
+  padding: 140px 5%;
+  background: linear-gradient(135deg, #000000, #0a0a0a);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, var(--medusa-green-glow), transparent);
+  opacity: 0.15;
+  animation: cta-glow 6s ease-in-out infinite;
+}
+
+@keyframes cta-glow {
+
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-badge {
+  display: inline-block;
+  background: var(--medusa-green);
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px var(--medusa-green-glow);
+}
+
+.cta-content h2 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.cta-content p {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.btn-cta {
+  background: var(--medusa-green);
+  color: #000;
+  padding: 20px 50px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 40px var(--medusa-green-glow);
+  border-radius: 50px;
+  border: 2px solid var(--medusa-green);
+}
+
+.btn-cta::before {
+  display: none;
+}
+
+.btn-cta:hover {
+  background: var(--medusa-green-dark);
+  box-shadow: 0 0 60px var(--medusa-green-glow);
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .cta-content h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .medusa-svg {
+    width: 90vmin;
+    height: 90vmin;
+  }
+}

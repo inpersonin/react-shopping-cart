@@ -1,0 +1,293 @@
+// API service for laptop data
+// Using front-facing laptop product images (isolated on black/transparent backgrounds)
+
+const LAPTOPS_API = [
+  {
+    id: 1,
+    name: "Medusa Blade 15",
+    price: 2499,
+    specs: "RTX 4070 • 240Hz • i7-13700H • 16GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 2,
+    name: "Stone G14",
+    price: 1599,
+    specs: "RTX 4060 • Ryzen 9 7940HS • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 3,
+    name: "Venom x16",
+    price: 2899,
+    specs: "RTX 4080 • i9-13900HK • 32GB • 2TB SSD",
+    img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 4,
+    name: "Basement Core i5",
+    price: 599,
+    specs: "GTX 1650 • i5-10300H • 8GB • 256GB SSD",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Budget",
+    inStock: true
+  },
+  {
+    id: 5,
+    name: "Medusa Pro 14",
+    price: 1299,
+    specs: "RTX 4050 • Ryzen 7 7735HS • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 6,
+    name: "Serpent X17",
+    price: 3299,
+    specs: "RTX 4090 • i9-13980HX • 32GB • 2TB SSD",
+    img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 7,
+    name: "Basilisk 16",
+    price: 1899,
+    specs: "RTX 4070 • Ryzen 9 7945HX • 16GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 8,
+    name: "Gorgon Ultra",
+    price: 4499,
+    specs: "RTX 4090 • i9-14900HX • 32GB • 2TB SSD",
+    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 9,
+    name: "Hydra Gaming",
+    price: 799,
+    specs: "RTX 3050 • i5-12450H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Budget",
+    inStock: true
+  },
+  {
+    id: 10,
+    name: "Python Elite",
+    price: 2199,
+    specs: "RTX 4080 • Ryzen 9 7945HX • 32GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 11,
+    name: "Viper Max",
+    price: 999,
+    specs: "RTX 3060 • i7-12650H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 12,
+    name: "Cobra Strike",
+    price: 1399,
+    specs: "RTX 4060 • Ryzen 7 7840HS • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 13,
+    name: "Anaconda Pro",
+    price: 2699,
+    specs: "RTX 4080 • i9-13900HX • 32GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 14,
+    name: "Rattlesnake 15",
+    price: 899,
+    specs: "RTX 3050 Ti • i5-12500H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Budget",
+    inStock: true
+  },
+  {
+    id: 15,
+    name: "Mamba X",
+    price: 1799,
+    specs: "RTX 4070 • Ryzen 9 6900HX • 16GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 16,
+    name: "Medusa Titan",
+    price: 4999,
+    specs: "RTX 4090 • i9-14900HX • 64GB • 4TB SSD",
+    img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 17,
+    name: "Serpent Lite",
+    price: 549,
+    specs: "GTX 1650 Ti • i5-10300H • 8GB • 256GB SSD",
+    img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Budget",
+    inStock: true
+  },
+  {
+    id: 18,
+    name: "Basilisk Mini",
+    price: 699,
+    specs: "RTX 3050 • Ryzen 5 5600H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Budget",
+    inStock: true
+  },
+  {
+    id: 19,
+    name: "Gorgon Standard",
+    price: 1199,
+    specs: "RTX 4060 • i7-13700H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 20,
+    name: "Hydra Plus",
+    price: 949,
+    specs: "RTX 3060 • Ryzen 7 6800H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 21,
+    name: "Python Advanced",
+    price: 2399,
+    specs: "RTX 4080 • i9-13900HX • 32GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 22,
+    name: "Viper Ultra",
+    price: 1099,
+    specs: "RTX 3060 Ti • i7-12700H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 23,
+    name: "Cobra Elite",
+    price: 1699,
+    specs: "RTX 4070 • Ryzen 9 7940HS • 16GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 24,
+    name: "Anaconda Max",
+    price: 2999,
+    specs: "RTX 4090 • i9-13980HX • 32GB • 2TB SSD",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 25,
+    name: "Rattlesnake Pro",
+    price: 849,
+    specs: "RTX 3050 • Ryzen 5 6600H • 16GB • 512GB SSD",
+    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Budget",
+    inStock: true
+  },
+  {
+    id: 26,
+    name: "Mamba Pro",
+    price: 1999,
+    specs: "RTX 4070 • i7-13700HX • 16GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 27,
+    name: "Medusa Beast",
+    price: 3799,
+    specs: "RTX 4090 • i9-14900HX • 48GB • 2TB SSD",
+    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 28,
+    name: "Serpent Pro",
+    price: 1499,
+    specs: "RTX 4060 • Ryzen 9 6900HX • 16GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Gaming",
+    inStock: true
+  },
+  {
+    id: 29,
+    name: "Basilisk X",
+    price: 2599,
+    specs: "RTX 4080 • i9-13900HX • 32GB • 1TB SSD",
+    img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  },
+  {
+    id: 30,
+    name: "Gorgon Supreme",
+    price: 5299,
+    specs: "RTX 4090 • i9-14900HX • 64GB • 4TB SSD • 4K",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
+    category: "Premium",
+    inStock: true
+  }
+];
+
+// Simulate API call with delay
+export const fetchLaptops = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(LAPTOPS_API);
+    }, 500); // Simulate network delay
+  });
+};
+
+export const getLaptopById = async (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const laptop = LAPTOPS_API.find(l => l.id === id);
+      resolve(laptop);
+    }, 300);
+  });
+};

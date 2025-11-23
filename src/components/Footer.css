@@ -1,0 +1,132 @@
+.footer {
+    border-top: 2px solid var(--medusa-green);
+    padding: 60px 5% 40px;
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #000000, #050505);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--medusa-green), transparent);
+    box-shadow: 0 0 20px var(--medusa-green-glow);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px var(--medusa-green-glow);
+}
+
+.footer-tagline {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--medusa-green);
+    border-radius: 50%;
+    color: var(--medusa-green);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.social-icon:hover {
+    background: var(--medusa-green);
+    color: #000;
+    box-shadow: 0 0 25px var(--medusa-green-glow);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--medusa-green);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--medusa-green);
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-copyright {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        font-size: 2rem;
+    }
+
+    .footer-social {
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .footer-links {
+        gap: 20px;
+        font-size: 0.9rem;
+    }
+}
