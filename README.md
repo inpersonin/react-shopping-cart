@@ -40,12 +40,6 @@ Icons: React Icons
 
 Data Source: Mock API (src/services/api.js) for rapid prototyping.
 
-⚙️ Setup and Installation
-
-Follow these steps to get the project running locally.
-
-(Installation guide intentionally omitted as per your request.)
-
 🚧 Development Challenges & Solutions
 
 Image Hotlinking & Reliability
