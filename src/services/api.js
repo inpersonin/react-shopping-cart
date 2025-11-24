@@ -9,7 +9,7 @@ const LAPTOPS_API = [
     specs: "RTX 4070 • 240Hz • i7-13700H • 16GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const LAPTOPS_API = [
     specs: "RTX 4060 • Ryzen 9 7940HS • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const LAPTOPS_API = [
     specs: "RTX 4080 • i9-13900HK • 32GB • 2TB SSD",
     img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const LAPTOPS_API = [
     specs: "GTX 1650 • i5-10300H • 8GB • 256GB SSD",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Budget",
-    inStock: true
+    inStock: true,
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const LAPTOPS_API = [
     specs: "RTX 4050 • Ryzen 7 7735HS • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const LAPTOPS_API = [
     specs: "RTX 4090 • i9-13980HX • 32GB • 2TB SSD",
     img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ const LAPTOPS_API = [
     specs: "RTX 4070 • Ryzen 9 7945HX • 16GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ const LAPTOPS_API = [
     specs: "RTX 4090 • i9-14900HX • 32GB • 2TB SSD",
     img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 9,
@@ -81,7 +81,7 @@ const LAPTOPS_API = [
     specs: "RTX 3050 • i5-12450H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Budget",
-    inStock: true
+    inStock: true,
   },
   {
     id: 10,
@@ -90,7 +90,7 @@ const LAPTOPS_API = [
     specs: "RTX 4080 • Ryzen 9 7945HX • 32GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 11,
@@ -99,7 +99,7 @@ const LAPTOPS_API = [
     specs: "RTX 3060 • i7-12650H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 12,
@@ -108,7 +108,7 @@ const LAPTOPS_API = [
     specs: "RTX 4060 • Ryzen 7 7840HS • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 13,
@@ -117,7 +117,7 @@ const LAPTOPS_API = [
     specs: "RTX 4080 • i9-13900HX • 32GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 14,
@@ -126,7 +126,7 @@ const LAPTOPS_API = [
     specs: "RTX 3050 Ti • i5-12500H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Budget",
-    inStock: true
+    inStock: true,
   },
   {
     id: 15,
@@ -135,7 +135,7 @@ const LAPTOPS_API = [
     specs: "RTX 4070 • Ryzen 9 6900HX • 16GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 16,
@@ -144,7 +144,7 @@ const LAPTOPS_API = [
     specs: "RTX 4090 • i9-14900HX • 64GB • 4TB SSD",
     img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 17,
@@ -153,7 +153,7 @@ const LAPTOPS_API = [
     specs: "GTX 1650 Ti • i5-10300H • 8GB • 256GB SSD",
     img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Budget",
-    inStock: true
+    inStock: true,
   },
   {
     id: 18,
@@ -162,7 +162,7 @@ const LAPTOPS_API = [
     specs: "RTX 3050 • Ryzen 5 5600H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Budget",
-    inStock: true
+    inStock: true,
   },
   {
     id: 19,
@@ -171,7 +171,7 @@ const LAPTOPS_API = [
     specs: "RTX 4060 • i7-13700H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 20,
@@ -180,7 +180,7 @@ const LAPTOPS_API = [
     specs: "RTX 3060 • Ryzen 7 6800H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 21,
@@ -189,7 +189,7 @@ const LAPTOPS_API = [
     specs: "RTX 4080 • i9-13900HX • 32GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 22,
@@ -198,7 +198,7 @@ const LAPTOPS_API = [
     specs: "RTX 3060 Ti • i7-12700H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 23,
@@ -207,7 +207,7 @@ const LAPTOPS_API = [
     specs: "RTX 4070 • Ryzen 9 7940HS • 16GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 24,
@@ -216,7 +216,7 @@ const LAPTOPS_API = [
     specs: "RTX 4090 • i9-13980HX • 32GB • 2TB SSD",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 25,
@@ -225,7 +225,7 @@ const LAPTOPS_API = [
     specs: "RTX 3050 • Ryzen 5 6600H • 16GB • 512GB SSD",
     img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Budget",
-    inStock: true
+    inStock: true,
   },
   {
     id: 26,
@@ -234,7 +234,7 @@ const LAPTOPS_API = [
     specs: "RTX 4070 • i7-13700HX • 16GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 27,
@@ -243,7 +243,7 @@ const LAPTOPS_API = [
     specs: "RTX 4090 • i9-14900HX • 48GB • 2TB SSD",
     img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 28,
@@ -252,7 +252,7 @@ const LAPTOPS_API = [
     specs: "RTX 4060 • Ryzen 9 6900HX • 16GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Gaming",
-    inStock: true
+    inStock: true,
   },
   {
     id: 29,
@@ -261,7 +261,7 @@ const LAPTOPS_API = [
     specs: "RTX 4080 • i9-13900HX • 32GB • 1TB SSD",
     img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
+    inStock: true,
   },
   {
     id: 30,
@@ -270,8 +270,8 @@ const LAPTOPS_API = [
     specs: "RTX 4090 • i9-14900HX • 64GB • 4TB SSD • 4K",
     img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop&crop=center&q=80",
     category: "Premium",
-    inStock: true
-  }
+    inStock: true,
+  },
 ];
 
 // Simulate API call with delay
@@ -286,7 +286,7 @@ export const fetchLaptops = async () => {
 export const getLaptopById = async (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const laptop = LAPTOPS_API.find(l => l.id === id);
+      const laptop = LAPTOPS_API.find((l) => l.id === id);
       resolve(laptop);
     }, 300);
   });

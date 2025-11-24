@@ -11,9 +11,12 @@ export default function Checkout({ goTo }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
             >
-                {/* Meme image will be added here */}
+                {/* Meme image added here */}
                 <div className="meme-container">
-                    {/* Placeholder for meme image */}
+                    <img 
+                        src="https://i.pinimg.com/736x/a8/40/05/a84005961662a5f554512ac39fe1794d.jpg" 
+                        alt="Get a job meme"
+                    />
                 </div>
 
                 <motion.h1
@@ -41,5 +44,3 @@ export default function Checkout({ goTo }) {
         </div>
     );
 }
-
-

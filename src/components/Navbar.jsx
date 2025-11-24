@@ -2,6 +2,37 @@ import { motion } from "framer-motion";
 import { FaShoppingCart, FaLaptop, FaHome } from "react-icons/fa";
 import "./Navbar.css";
 
+const MedusaIcon = () => (
+  <svg viewBox="0 0 100 100" className="medusa-icon-svg">
+    <defs>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+        <feMerge>
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    
+    {/* Snakes Hair */}
+    <path d="M50 20 C 30 10, 10 30, 20 50" stroke="#00ff88" strokeWidth="3" fill="none" filter="url(#glow)" />
+    <path d="M50 20 C 70 10, 90 30, 80 50" stroke="#00ff88" strokeWidth="3" fill="none" filter="url(#glow)" />
+    <path d="M50 20 C 40 5, 20 10, 15 25" stroke="#00ff88" strokeWidth="3" fill="none" filter="url(#glow)" />
+    <path d="M50 20 C 60 5, 80 10, 85 25" stroke="#00ff88" strokeWidth="3" fill="none" filter="url(#glow)" />
+    
+    {/* Face Shape */}
+    <path d="M30 40 Q 50 90 70 40" stroke="#00ff88" strokeWidth="2" fill="none" filter="url(#glow)" />
+    <path d="M30 40 Q 50 10 70 40" stroke="#00ff88" strokeWidth="2" fill="none" filter="url(#glow)" />
+    
+    {/* Eyes */}
+    <circle cx="42" cy="45" r="3" fill="#00ff88" filter="url(#glow)" />
+    <circle cx="58" cy="45" r="3" fill="#00ff88" filter="url(#glow)" />
+    
+    {/* Mouth - Evil Smile */}
+    <path d="M40 65 Q 50 75 60 65" stroke="#00ff88" strokeWidth="2" fill="none" filter="url(#glow)" />
+  </svg>
+);
+
 export default function Navbar({ goTo, cartCount }) {
   return (
     <motion.nav
@@ -12,11 +43,7 @@ export default function Navbar({ goTo, cartCount }) {
     >
       <div className="logo" onClick={() => goTo("home")}>
         <div className="medusa-logo-circle">
-          <img
-            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=200&fit=crop&q=80"
-            alt="Medusa"
-            className="medusa-logo-img"
-          />
+          <MedusaIcon />
         </div>
         <span className="logo-text">
           MEDUSA'S <span className="highlight">BASEMENT</span>
